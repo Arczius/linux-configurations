@@ -70,7 +70,8 @@
   services.xserver.libinput.enable = true;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.jar = {
+  #change the username to your username
+  users.users.username = {
      isNormalUser = true;
      extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
    };
@@ -97,25 +98,50 @@
 # List packages installed in system profile. To search, run:
   # $ nix search wget
    environment.systemPackages = with pkgs; [
-   	jre8
-   	python3Full
+   
+   	#gnome apps i use for some reason
    	gnome.gnome-tweaks
-   	wget
-	git
-     	firefox
-     	neofetch
 	gnome.gedit
-	lunar-client
-	multimc
-	wine
-	etcher
-	gnome3.adwaita-icon-theme
-	lutris-unwrapped
+	
+	#other apps i like to install
 	discord
+	neofetch
+	
+	#code stuff
+	jre8
+	python3Full
 	vscode
 	gitkraken
+	
+	#a torrent client
+	qbittorrent
+	
+	#games
+	lunar-client
+	multimc
+	steam
+	
+	#apps for multimedia
+	vlc
+	spotify
 	tartube
+	
+	#my essential apps
+	git
+	firefox
+	etcher
+	wget
+	
+	#my icon themes i always install to make sure apps have icons
 	papirus-icon-theme
+	gnome3.adwaita-icon-theme
+	
+	#installs lutris, and wine to run windows apps and games
+	lutris-unwrapped
+	wineWowPackages.stable
+	winePackages.fonts
+	playonlinux
+	winetricks
    ];
 
 
@@ -147,4 +173,3 @@
   system.stateVersion = "21.05"; # Did you read the comment?
 
 }
-
