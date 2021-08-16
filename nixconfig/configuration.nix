@@ -14,6 +14,9 @@
   # Use the systemd-boot EFI boot loader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
+  
+  # set your own chosen kernel
+  boot.kernelPackages = pkgs.linuxPackages_zen;
 
   networking.hostName = "Nix"; # Define your hostname.
   #networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
@@ -70,7 +73,7 @@
   services.xserver.libinput.enable = true;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
-  #change the username to your username
+  # change the username to your username
   users.users.username = {
      isNormalUser = true;
      extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
@@ -108,6 +111,7 @@
 	neofetch
 	
 	#code stuff
+	firefox-devedition-bin
 	jre8
 	python3Full
 	vscode
@@ -128,7 +132,7 @@
 	
 	#my essential apps
 	git
-	firefox
+	brave
 	etcher
 	wget
 	
@@ -173,3 +177,4 @@
   system.stateVersion = "21.05"; # Did you read the comment?
 
 }
+
