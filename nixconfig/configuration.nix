@@ -9,7 +9,7 @@
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
       ./packages.nix
-      ./flatpak.nix
+      #./flatpak.nix
       ./version.nix
       ./sysSettings.nix
       ./x11.nix
@@ -17,6 +17,7 @@
       ./printer.nix
       ./desktopEnvironment.nix
       #./ssh.nix
+      ./docker.nix
     ];
 }
 
